@@ -4,8 +4,16 @@
   "description": "fisrtTry",
   "main": "index.js",
   "scripts": {
-    "test": "jeeeeeeest"
+    "test": "jeeeeeeest",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
   "author": "SteShi",
   "license": "ISC",
   "devDependencies": {
