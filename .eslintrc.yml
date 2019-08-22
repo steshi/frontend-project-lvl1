@@ -1,6 +1,7 @@
 {
-  "plugins": [
-    "babel"
-  ],
+    "plugins": [
+      "babel"
+    ],
     "parser": "babel-eslint",
+    "extends": "airbnb-base",
 }
