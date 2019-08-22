@@ -23,6 +23,11 @@
     "@babel/preset-env": "^7.5.5"
   },
   "dependencies": {
+    "atom": "^1.1.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-babel": "^5.3.0",
     "readline-sync": "^1.4.10"
   }
 }

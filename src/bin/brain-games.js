@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-import privet from '..';
+import {name} from '..';
 
-privet;
+console.log('Welcome to Brain Games!!');
+console.log(`Hello ${name('what is you name?')}!!`);
+
+
 
