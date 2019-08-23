@@ -1,4 +1,8 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-export default (str) => readlineSync.question(str);
+const bgame = () => {
+  const name = readlineSync.question('What is your name? ');
+  console.log(`nice to meet you ${name}`);
+};
+
+export default bgame;
