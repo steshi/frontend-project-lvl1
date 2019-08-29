@@ -10,6 +10,7 @@
   },
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
+    "brain-gcd": "dist/bin/brain-nod.js",
     "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [

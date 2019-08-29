@@ -10,3 +10,7 @@ brain-even
 brain-calc
 
 <a href="https://asciinema.org/a/KsJWNOWyhh2jXE820jkJH8XJT" target="_blank"><img src="https://asciinema.org/a/KsJWNOWyhh2jXE820jkJH8XJT.svg" width="200" height="150"/></a>
+
+brain-NOD
+
+<a href="https://asciinema.org/a/V7MywjRsbA9C3ld7i8tv7fAXN" target="_blank"><img src="https://asciinema.org/a/V7MywjRsbA9C3ld7i8tv7fAXN.svg" width="200" height="150"/></a>
