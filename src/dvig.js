@@ -9,7 +9,7 @@ const check = (needList, name, quList) => {
     const get = readlineSync.question('Your answer:');
     const need = head(needList);
     if (String(get) !== String(need)) {
-      console.log(`${get} is wrong anwer^-^ correct answer was ${need}`);
+      console.log(`${get} is wrong answer^-^ correct answer was ${need}`);
       console.log(`Lets try again, ${name}`);
     } else {
       console.log('correct!!!!!!');

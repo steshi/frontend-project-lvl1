@@ -6,6 +6,8 @@ startcalc:
 			 npx babel-node src/bin/brain-calc.js
 startnod:
 			 npx babel-node src/bin/brain-nod.js
+startprogr:
+			 npx babel-node src/bin/brain-progr.js
 publish:
 	npm publish --dry-run
 lint:

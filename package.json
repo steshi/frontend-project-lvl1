@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.5.5"
   },
   "dependencies": {
+    "@hexlet/pairs": "^1.0.10",
     "@hexlet/pairs-data": "^1.0.9",
     "atom": "^1.1.0",
     "babel-eslint": "^10.0.2",

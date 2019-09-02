@@ -7,6 +7,7 @@ const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) 
 export default () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello ${name}`);
+
   const operators = '+-*';
   const need = (str, x, y) => {
     if (str === '+') {
