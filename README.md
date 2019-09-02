@@ -14,3 +14,6 @@ brain-NOD
 
 brain-GCD
 <a href="https://asciinema.org/a/7noub8BOGttPUTyQENxgMwjkE" target="_blank"><img src="https://asciinema.org/a/7noub8BOGttPUTyQENxgMwjkE.svg" width="200" height="150"/></a>
+
+brain-prime
+<a href="https://asciinema.org/a/PDgAbxjHplsVow4LeGhevQrbn" target="_blank"><img src="https://asciinema.org/a/PDgAbxjHplsVow4LeGhevQrbn.svg" width="200" height="150"/></a>

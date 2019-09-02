@@ -12,7 +12,8 @@
     "brain-even": "dist/bin/brain-even.js",
     "brain-node": "dist/bin/brain-nod.js",
     "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-progr.js"
+    "brain-gcd": "dist/bin/brain-progr.js",
+    "brain-prime": "dist/bin/brain-prime.js"
   },
   "files": [
     "dist"
