@@ -2,6 +2,6 @@
 import { progr } from '..';
 
 console.log('Welcome to Brain Games!!');
-console.log('Find the greatest common divisor of given numbers.');
+console.log('What number is missing in the progression?');
 
 progr();

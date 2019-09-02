@@ -1,7 +1,8 @@
 {
   "name": "1pr",
   "version": "1.0.0",
-  "description": "fisrtTry",
+  "description": "SteShi fisrt project - Brain-Games",
+  "keywords": "SteShi, hexlet, brain-games, JS project",
   "main": "index.js",
   "scripts": {
     "test": "jeeeeeeest",
@@ -10,7 +11,7 @@
   },
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
-    "brain-node": "dist/bin/brain-nod.js",
+    "brain-nod": "dist/bin/brain-nod.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-gcd": "dist/bin/brain-progr.js",
     "brain-prime": "dist/bin/brain-prime.js"
