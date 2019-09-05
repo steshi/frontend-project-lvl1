@@ -1,6 +1,12 @@
 # frontend-project-lvl1
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+
+<a href="https://codeclimate.com/github/steshi/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/6a9a5481b553a6d01021/maintainability" /></a>
+<a href="https://codeclimate.com/github/steshi/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/6a9a5481b553a6d01021/test_coverage" /></a>
+
+
+
 [![Build Status](https://travis-ci.org/steshi/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/steshi/frontend-project-lvl1)
 
 
