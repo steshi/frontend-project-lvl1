@@ -1,62 +1,53 @@
-import {
-  l,
-} from '@hexlet/pairs-data';
-import {
-  cons, car, cdr,
-} from '@hexlet/pairs';
-import readlineSync from 'readline-sync';
-import check from '../dvig';
+import { l } from '@hexlet/pairs-data';
+import { cons, car, cdr } from '@hexlet/pairs';
+import { check, randomInRange } from '../engine';
 
-const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 let result = '';
 let randomElement = randomInRange(1, 10);
-let element;
+let missedElement;
 
-const string = (startEl, stepEl, count) => {
+const makeProgressionString = (startElement, stepEl, count) => {
   if (count === 0) {
-    const bu = cons(result, element);
+    const finalResult = cons(result, missedElement);
     result = '';
     randomElement = randomInRange(1, 10);
-    return bu;
+    return finalResult;
   }
 
   if (count === randomElement) {
     result = `${result} ..`;
-    element = startEl;
+    missedElement = startElement;
   } else {
-    result = `${result} ${startEl}`;
+    result = `${result} ${startElement}`;
   }
 
-  return string(startEl + stepEl, stepEl, count - 1);
+  return makeProgressionString(startElement + stepEl, stepEl, count - 1);
 };
 
 
 export default () => {
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${name}`);
-
-
+  const describtion = 'What number is missing in the progression?';
   const countEl = 10;
 
   const step1 = randomInRange(5, 10);
-  const startEl1 = randomInRange(1, 5);
-  const pair1 = string(startEl1, step1, countEl);
-  const qu1 = `${car(pair1)}`;
-  const need1 = cdr(pair1);
+  const startElement1 = randomInRange(1, 5);
+  const pair1 = makeProgressionString(startElement1, step1, countEl);
+  const question1 = `${car(pair1)}`;
+  const rightAnswer1 = cdr(pair1);
 
   const step2 = randomInRange(5, 10);
-  const startEl2 = randomInRange(1, 5);
-  const pair2 = string(startEl2, step2, countEl);
-  const qu2 = `${car(pair2)}`;
-  const need2 = cdr(pair2);
+  const startElement2 = randomInRange(1, 5);
+  const pair2 = makeProgressionString(startElement2, step2, countEl);
+  const question2 = `${car(pair2)}`;
+  const rightAnswer2 = cdr(pair2);
 
   const step3 = randomInRange(5, 10);
-  const startEl3 = randomInRange(1, 5);
-  const pair3 = string(startEl3, step3, countEl);
-  const qu3 = `${car(pair3)}`;
-  const need3 = cdr(pair3);
+  const startElement3 = randomInRange(1, 5);
+  const pair3 = makeProgressionString(startElement3, step3, countEl);
+  const question3 = `${car(pair3)}`;
+  const rightAnswer3 = cdr(pair3);
 
-  const quList = l(qu1, qu2, qu3);
-  const needList = l(need1, need2, need3);
-  check(needList, name, quList);
+  const questionList = l(question1, question2, question3);
+  const rightAnswerList = l(rightAnswer1, rightAnswer2, rightAnswer3);
+  check(rightAnswerList, questionList, describtion);
 };
