@@ -4,7 +4,7 @@ import { car, cdr } from '@hexlet/pairs';
 export const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const check = (pairGen, describtion) => {
-  const countOfRounds = 5;
+  const countOfRounds = 3;
   console.log('Hello');
   console.log('Welcome to Brain Games!!');
   console.log(describtion);
