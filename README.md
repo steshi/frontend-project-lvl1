@@ -6,8 +6,9 @@
 [![Build Status](https://travis-ci.org/steshi/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/steshi/frontend-project-lvl1)
 
 
-brain-even <a href="https://asciinema.org/a/T64UJvALFuDzLmJdd2A2h5u6X" target="_blank"><img src="https://asciinema.org/a/T64UJvALFuDzLmJdd2A2h5u6X.svg" width="200" height="150"/></a>
-brain-calc <a href="https://asciinema.org/a/HLIjDpAnOnrRcpywxTOsLOSUH" target="_blank"><img src="https://asciinema.org/a/HLIjDpAnOnrRcpywxTOsLOSUH.svg" width="200" height="150"/></a>
-brain-NOD <a href="https://asciinema.org/a/PeR35QDh5q6ZhULNu8FHcsMtR" target="_blank"><img src="https://asciinema.org/a/PeR35QDh5q6ZhULNu8FHcsMtR.svg" width="200" height="150"/></a>
-brain-GCD <a href="https://asciinema.org/a/2XmcCwOehaQDSfVQFn1TC88qq" target="_blank"><img src="https://asciinema.org/a/2XmcCwOehaQDSfVQFn1TC88qq.svg" width="200" height="150"/></a>
-brain-prime <a href="https://asciinema.org/a/vKf7GBqpcnUpc3LnyML6y0o2b" target="_blank"><img src="https://asciinema.org/a/vKf7GBqpcnUpc3LnyML6y0o2b.svg" width="200" height="150"/></a>
+
+brain-even <a href="https://asciinema.org/a/267960" target="_blank"><img src="https://asciinema.org/a/267960.svg" width="200" height="150"/></a>
+brain-calc <a href="https://asciinema.org/a/267961" target="_blank"><img src="https://asciinema.org/a/267961.svg" width="200" height="150"/></a>
+brain-GCD <a href="https://asciinema.org/a/267964" target="_blank"><img src="https://asciinema.org/a/267964.svg" width="200" height="150"/></a>
+brain-prime <a href="https://asciinema.org/a/267965" target="_blank"><img src="https://asciinema.org/a/267965.svg" width="200" height="150"/></a>
+brain-progression <a href="https://asciinema.org/a/267969" target="_blank"><img src="https://asciinema.org/a/267969.svg" width="200" height="150"/></a>

@@ -1,9 +1,10 @@
 import { cons } from '@hexlet/pairs';
-import { check, randomInRange } from '../engine';
+import check from '../engine';
+import randomInRange from '../lib/utils';
 
-const describtion = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
-const pairGen = () => {
+const generator = () => {
   const operators = '+-*';
   const calculation = (str, x, y) => {
     if (str === '+') {
@@ -20,4 +21,4 @@ const pairGen = () => {
   return cons(question, rightAnswer);
 };
 
-export default () => check(pairGen, describtion);
+export default () => check(generator, description);
