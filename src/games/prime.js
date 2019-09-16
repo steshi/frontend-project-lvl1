@@ -1,24 +1,24 @@
 import { cons } from '@hexlet/pairs';
-import check from '../engine';
+import engine from '../engine';
 import randomInRange from '../lib/utils';
 
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  for (let j = 2; j < num / 2; j += 1) {
+  for (let j = 2; j <= num / 2; j += 1) {
     if (num % j === 0) {
-      return 1;
+      return false;
     }
   }
-  return 0;
+  return true;
 };
 
-const generator = () => {
-  const num = randomInRange(1, 3500);
-  const question = `${num}`;
-  const rightAnswer = (isPrime(num) === 1) ? 'no' : 'yes';
+const generateQuestionAndAnswer = () => {
+  const num = randomInRange(1, 10);
+  const question = num;
+  const rightAnswer = isPrime(num) ? 'yes' : 'no';
   return cons(question, rightAnswer);
 };
 
-export default () => check(generator, description);
+export default () => engine(generateQuestionAndAnswer, description);

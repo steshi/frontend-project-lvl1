@@ -1,37 +1,37 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import check from '../engine';
+import engine from '../engine';
 import randomInRange from '../lib/utils';
 
 const description = 'What number is missing in the progression?';
 
-const generateProgression = (a, b, c) => {
+const genProgressionHideElement = (startEl, stepEl, progressionLength) => {
   let result = '';
-  const randomElement = randomInRange(1, 7);
+  const numberOfHiddenElement = randomInRange(1, progressionLength);
   let missedElement;
-  const iteration = (startElement, step, count) => {
+  const iter = (startElement, step, count) => {
     if (count === 0) {
       return cons(result, missedElement);
     }
 
-    if (count === randomElement) {
+    if (count === numberOfHiddenElement) {
       result = `${result} ..`;
       missedElement = startElement;
     } else {
       result = `${result} ${startElement}`;
     }
-    return iteration(startElement + step, step, count - 1);
+    return iter(startElement + step, step, count - 1);
   };
-  return iteration(a, b, c);
+  return iter(startEl, stepEl, progressionLength);
 };
 
-const generator = () => {
-  const countOfElements = 7;
-  const step = randomInRange(1, 7);
-  const startElement = randomInRange(1, 5);
-  const progressionAndMissedElement = generateProgression(startElement, step, countOfElements);
-  const question = `${car(progressionAndMissedElement)}`;
-  const rightAnswer = cdr(progressionAndMissedElement);
+const generateQuestionAndAnswer = () => {
+  const progressionLength = 10;
+  const step = randomInRange(1, 6);
+  const firstElement = randomInRange(1, 5);
+  const questionAndAnswer = genProgressionHideElement(firstElement, step, progressionLength);
+  const question = `${car(questionAndAnswer)}`;
+  const rightAnswer = cdr(questionAndAnswer);
   return cons(question, rightAnswer);
 };
 
-export default () => check(generator, description);
+export default () => engine(generateQuestionAndAnswer, description);
