@@ -4,33 +4,35 @@ import randomInRange from '../lib/utils';
 
 const description = 'What number is missing in the progression?';
 
-const genProgressionHideElement = (startEl, stepEl, progressionLength) => {
+const genQuestion = (startEl, stepEl, progressionLength, hiddenElementIndex) => {
   let result = '';
-  const numberOfHiddenElement = randomInRange(1, progressionLength);
   let missedElement;
   const iter = (startElement, step, count) => {
     if (count === 0) {
       return cons(result, missedElement);
     }
 
-    if (count === numberOfHiddenElement) {
-      result = `${result} ..`;
+    if (count === hiddenElementIndex) {
+      result = (result === '') ? `${result}..` : `${result} ..`;
       missedElement = startElement;
     } else {
-      result = `${result} ${startElement}`;
+      result = (result === '') ? `${result}${startElement}` : `${result} ${startElement}`;
     }
     return iter(startElement + step, step, count - 1);
   };
+
   return iter(startEl, stepEl, progressionLength);
 };
 
+const progressionLength = 10;
+
 const generateQuestionAndAnswer = () => {
-  const progressionLength = 10;
   const step = randomInRange(1, 6);
   const firstElement = randomInRange(1, 5);
-  const questionAndAnswer = genProgressionHideElement(firstElement, step, progressionLength);
-  const question = `${car(questionAndAnswer)}`;
-  const rightAnswer = cdr(questionAndAnswer);
+  const hiddenElementIndex = randomInRange(1, progressionLength);
+  const questionAndAnswer = genQuestion(firstElement, step, progressionLength, hiddenElementIndex);
+  const question = car(questionAndAnswer);
+  const rightAnswer = String(cdr(questionAndAnswer));
   return cons(question, rightAnswer);
 };
 
