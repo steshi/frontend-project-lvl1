@@ -4,10 +4,10 @@ import randomInRange from '../lib/utils';
 
 const description = 'What number is missing in the progression?';
 
-const genQuestion = (startEl, stepEl, progressionLength, hiddenElementIndex) => {
+const genQuestion = (startEl, step, progressionLength, hiddenElementIndex) => {
   let result = '';
   let missedElement;
-  const iter = (startElement, step, count) => {
+  const iter = (startElement, count) => {
     if (count === 0) {
       return cons(result, missedElement);
     }
@@ -21,7 +21,7 @@ const genQuestion = (startEl, stepEl, progressionLength, hiddenElementIndex) => 
     return iter(startElement + step, step, count - 1);
   };
 
-  return iter(startEl, stepEl, progressionLength);
+  return iter(startEl, step, progressionLength);
 };
 
 const progressionLength = 10;
