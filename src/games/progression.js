@@ -4,7 +4,7 @@ import randomInRange from '../lib/utils';
 
 const description = 'What number is missing in the progression?';
 
-const genQuestion = (startEl, step, progressionLength, hiddenElementIndex) => {
+const generateQuestion = (startEl, step, progressionLength, hiddenElementIndex) => {
   let result = '';
   let missedElement;
   const iter = (startElement, count) => {
@@ -30,7 +30,7 @@ const generateQuestionAndAnswer = () => {
   const step = randomInRange(1, 6);
   const firstElement = randomInRange(1, 5);
   const hiddenElementIndex = randomInRange(1, progressionLength);
-  const questionAndAnswer = genQuestion(firstElement, step, progressionLength, hiddenElementIndex);
+  const questionAndAnswer = generateQuestion(firstElement, step, progressionLength, hiddenElementIndex);
   const question = car(questionAndAnswer);
   const rightAnswer = String(cdr(questionAndAnswer));
   return cons(question, rightAnswer);
