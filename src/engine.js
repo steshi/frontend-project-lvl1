@@ -10,11 +10,11 @@ export default (generateGame, description) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}`);
 
-  const checkAnswer = (questionAndAnswer, countOfRound) => {
+  const iter = (questionAndAnswer, countOfRound) => {
     const questionAnswer = questionAndAnswer();
     if (countOfRound === 0) {
       console.log(`Congratulation, ${userName}`);
-      return undefined;
+      return;
     }
     const question = car(questionAnswer);
     console.log(`Question: ${question}`);
@@ -22,10 +22,10 @@ export default (generateGame, description) => {
     const rightAnswer = cdr(questionAnswer);
     if (userAnswer !== rightAnswer) {
       console.log(`${userAnswer} is wrong answer^-^ correct answer was ${rightAnswer}\nLets try again, ${userName}`);
-      return undefined;
+      return;
     }
     console.log('correct!!!!!!');
-    return checkAnswer(questionAndAnswer, countOfRound - 1);
+    return iter(questionAndAnswer, countOfRound - 1);
   };
-  checkAnswer(generateGame, roundsCount);
+  iter(generateGame, roundsCount);
 };
