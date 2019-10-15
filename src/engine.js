@@ -25,7 +25,7 @@ export default (generateGame, description) => {
       return;
     }
     console.log('correct!!!!!!');
-    return iter(questionAndAnswer, countOfRound - 1);
+    iter(questionAndAnswer, countOfRound - 1);
   };
   iter(generateGame, roundsCount);
 };
