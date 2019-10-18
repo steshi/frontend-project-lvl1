@@ -12,7 +12,7 @@ const generateQuestionAndAnswer = () => {
   const hiddenElementIndex = randomInRange(1, length);
   let question = '';
   const rightAnswer = String(firstElement + step * hiddenElementIndex);
-  for (let i = 1; i <= length; i += 1) {
+  for (let i = 0; i <= length; i += 1) {
     question = (i === hiddenElementIndex) ? `${question} ..` : `${question} ${firstElement + step * i}`;
   }
   return cons(question.trim(), rightAnswer);
